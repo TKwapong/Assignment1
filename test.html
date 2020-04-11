@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <h1>Larger, who?</h1>
+
+  <p>Enjoy:</p>
+  <br />
+  Enter your first value: <input type="text" id="value1" /><br /><br />
+  Enter your second value: <input type="text" id="value2" /><br /><br />
+  <input type="submit" value="???" onclick="data()" /><br />
+
+  <p id="demo"></p>
+
+  <script>
+    function data() {
+      var value1 = document.getElementById("value1").value;
+      var value2 = document.getElementById("value2").value;
+      var x = myFunction(value1, value2);
+      document.getElementById("demo").innerHTML = x;
+
+      function myFunction(a, b) {
+        if (a > b) {
+          return a + " is the larger value.";
+        } else if (a < b) {
+          return a + " is the lesser value.";
+        } else {
+          return (
+            "The first value " +
+            a +
+            " and the second value " +
+            b +
+            " are equal."
+          );
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>
